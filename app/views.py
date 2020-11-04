@@ -3,7 +3,7 @@ from flask import request
 from flask_api import status
 from app import app
 
-@app.route('/files', methods=['GET', 'POST'])
+@app.route('/api/files', methods=['GET', 'POST'])
 def files_route():
 
     if request.method == 'POST':
