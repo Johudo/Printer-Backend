@@ -1,1 +1,4 @@
-Flask==1.1.2
+Flask
+flask
+flask_cors
+flask_api
