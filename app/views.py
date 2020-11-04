@@ -1,13 +1,7 @@
 import os
-from flask import Flask, request
+from flask import request
 from flask_api import status
-from flask_cors import CORS
-
-UPLOAD_FOLDER = r"c:\Users\dimaz\Desktop\Printer Project\printer_uploaded_files"
-
-app = Flask(__name__)
-CORS(app)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
+from app import app
 
 @app.route('/files', methods=['GET', 'POST'])
 def files_route():
@@ -40,8 +34,3 @@ def files_route():
 
         return data, status.HTTP_200_OK
 
-
-
-
-if __name__ == '__main__':
-    app.run()
