@@ -3,4 +3,4 @@ RUN apk --update add bash nano
 ENV STATIC_URL /static
 ENV STATIC_PATH /var/www/Printer-Backend/app/static
 COPY ./requirements.txt /var/www/Printer-Backend/requirements.txt
-RUN pip install -r /var/www/requirements.txt
+RUN pip install -r /var/www/Printer-Backend/requirements.txt
