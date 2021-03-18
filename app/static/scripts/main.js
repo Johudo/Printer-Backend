@@ -43,6 +43,7 @@ submitButton.onclick = function () {
                         "</p>\n" +
                         '<a class="right-content_part right-content_part__back-to-main-button button" href="">На главную</a>';
                 }
-            });
+            })
+            .catch((err) => console.log(err));
     }
 };
