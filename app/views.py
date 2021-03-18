@@ -1,7 +1,11 @@
 import os
-from flask import request
+from flask import request, render_template
 from flask_api import status
 from app import app
+
+@app.route('/', methods=['GET'])
+def show_fronend():
+    return render_template('index.html')
 
 @app.route('/api/files', methods=['GET', 'POST'])
 def files_route():
