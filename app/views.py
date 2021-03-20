@@ -23,6 +23,12 @@ def files_route():
         f.close()
         file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
 
+
+        # --------------------------------------------------------
+        # TODO: Add printer name to config
+        # --------------------------------------------------------
+        os.system('lp -d cowork ' + os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+
         data = {
             'text': 'Ваш файл отправлен в очередь на печать'
         }
